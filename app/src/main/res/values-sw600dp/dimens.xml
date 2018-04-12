@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //signUp Activity dimensions
+
+    <dimen name="layout_height">650dp</dimen>
+    <dimen name="margin_from_sides">30dp</dimen>
+    <dimen name="height_for_all">65dp</dimen>
+    <dimen name="marging_from_layout">30dp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="margin_botton_bw_layout">20dp</dimen>
+    <dimen name="signin_bottom_margin">80dp</dimen>
+    <dimen name="margin_bottom">55dp</dimen>
+    <dimen name="logo_height">250dp</dimen>
+    <dimen name="bottom_layout_height">300dp</dimen>
+    <dimen name="upper_layout_hight">500dp</dimen>
+
+
+    // Login Activity Dimensions
+
+    <dimen name="forget_text_size">22sp</dimen>
+    <dimen name="margin_side_parent">70dp</dimen>
+    <dimen name="topmargin_email">150dp</dimen>
+
+
+    // HomePage Activity Dimensions
+
+    <dimen name="viewpager_Image_size">300dp</dimen>
+    <dimen name="home_text_size">30sp</dimen>
+
+
+
+
+    //Form Activity Dimension
+
+    <dimen name="leftRight_margin">50dp</dimen>
+    <dimen name="margin_from_submit">80dp</dimen>
+    <dimen name="margin_top_from_name">180dp</dimen>
+    <dimen name="view_pager_height">59dp</dimen>
+    <dimen name="power_btn_width_height">50sp</dimen>
+    <dimen name="power_btn_margin_left">44dp</dimen>
+    <dimen name="power_btn_margin_top">18sp</dimen>
+    <dimen name="constraint_layout2_height">500dp</dimen>
+
+
+</resources>
