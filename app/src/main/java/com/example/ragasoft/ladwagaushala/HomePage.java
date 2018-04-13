@@ -1,9 +1,9 @@
 package com.example.ragasoft.ladwagaushala;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -13,6 +13,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener
 {
     ConstraintLayout layoutList;
    private ImageView logout_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
