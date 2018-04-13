@@ -28,12 +28,14 @@ public class HomePage extends AppCompatActivity
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment;
     FragmentTransaction fragmentTransaction;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_namehindi);
         setSupportActionBar(toolbar);
 
         bottomNavigationView = findViewById(R.id.bottom_view);
@@ -43,23 +45,22 @@ public class HomePage extends AppCompatActivity
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home: {
-                        Toast.makeText(HomePage.this, "Home Fragment", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(HomePage.this, "Home Fragment", Toast.LENGTH_SHORT).show();
                         if (homeFragment != null) {
 
                             fragmentTransaction = getSupportFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.frame, homeFragment);
-//                        fragmentTransaction.addToBackStack(null);
-
+                            fragmentTransaction.addToBackStack(null);
                             fragmentTransaction.commit();
                             Toast.makeText(HomePage.this, "Home", Toast.LENGTH_SHORT).show();
                         } else {
                             homeFragment = new HomeFragment();
                             fragmentTransaction = getSupportFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.frame, homeFragment);
-//                            fragmentTransaction.addToBackStack(null);
+                            fragmentTransaction.addToBackStack(null);
 
                             fragmentTransaction.commit();
-                            Toast.makeText(HomePage.this, "Home", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(HomePage.this, "Home", Toast.LENGTH_SHORT).show();
 //                        home_fragment = new HomeScreenFragment();
                         }
 
@@ -68,27 +69,6 @@ public class HomePage extends AppCompatActivity
                 }
 
 
-//                if (homeFragment   != null)
-//                {
-//
-//                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction.replace(R.id.frame, homeFragment);
-////                        fragmentTransaction.addToBackStack(null);
-//
-//                    fragmentTransaction.commit();
-//                    Toast.makeText(HomePage.this, "Home", Toast.LENGTH_SHORT).show();
-//                }
-//                else
-//                {
-//                    homeFragment = new HomeFragment();
-//                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction.replace(R.id.frame, homeFragment);
-////                            fragmentTransaction.addToBackStack(null);
-//
-//                    fragmentTransaction.commit();
-//                    Toast.makeText(HomePage.this, "Home", Toast.LENGTH_SHORT).show();
-////                        home_fragment = new HomeScreenFragment();
-//                }
                 return false;
             }
         });
@@ -101,6 +81,24 @@ public class HomePage extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (homeFragment == null) {
+
+
+//                    toolbar.setVisibility(View.VISIBLE);
+            homeFragment = new HomeFragment();
+
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame, homeFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        } else {
+//                    toolbar.setVisibility(View.VISIBLE);
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame, homeFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 
     @Override

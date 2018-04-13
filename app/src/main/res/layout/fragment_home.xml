@@ -25,24 +25,31 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/viewpager_height"
                 android:layout_marginBottom="10dp"
-                android:background="#a3ede5"
-
+                android:background="@drawable/viewpagerback"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <android.support.constraint.ConstraintLayout
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/circlePageIndicator"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dots_layout_height"
-                android:background="#83e2d8d8"
+                android:layout_centerHorizontal="true"
+                android:background="#71000000"
+                android:elevation="5.0dp"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                app:centered="true"
+                app:fillColor="@color/backgroundappcolor"
                 app:layout_constraintBottom_toBottomOf="@+id/viewpagerfragemnt"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="129dp">
 
-            </android.support.constraint.ConstraintLayout>
+            </com.viewpagerindicator.CirclePageIndicator>
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout7"
@@ -431,7 +438,7 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/products_layout"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/naturopathy_layout_height"
+                android:layout_height="@dimen/product_layout_height"
                 android:layout_marginEnd="@dimen/margin_sides_from_parent"
                 android:layout_marginStart="@dimen/margin_sides_from_parent"
                 android:layout_marginTop="@dimen/margin_sides_from_parent"
@@ -451,7 +458,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingBottom="@dimen/padding_headings"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     android:paddingTop="@dimen/padding_headings"
                     android:text="PRODUCT"
                     android:textColor="@color/black"
@@ -480,7 +487,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
                     android:paddingTop="10dp"
                     android:src="@drawable/rightshift"
                     app:layout_constraintBottom_toTopOf="@+id/recyclerView"
@@ -491,11 +499,14 @@
                     android:id="@+id/recyclerView"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/seeall" />
+                    app:layout_constraintTop_toBottomOf="@+id/seeall"
+                    app:layout_constraintVertical_bias="0.0" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout

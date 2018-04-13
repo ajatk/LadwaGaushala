@@ -49,17 +49,24 @@
 
     //HomeFragment Dimensions
 
-    <dimen name="viewpager_height">250dp</dimen>
+    <dimen name="viewpager_height">270dp</dimen>
     <dimen name="dots_layout_height">50dp</dimen>
     <dimen name="services_text_size">20sp</dimen>
     <dimen name="tumbicon_text_size">15sp</dimen>
     <dimen name="constraintlyaout_height">280dp</dimen>
     <dimen name="contrainthalflayout_height">130dp</dimen>
-    <dimen name="naturopathy_layout_height">250dp</dimen>
+    <dimen name="naturopathy_layout_height">280dp</dimen>
     <dimen name="margin_sides_from_parent">20dp</dimen>
     <dimen name="heading_text_size">17sp</dimen>
     <dimen name="seeall_text_size">20sp</dimen>
     <dimen name="padding_headings">10dp</dimen>
+    <dimen name="product_layout_height">310dp</dimen>
+
+
+    //HOrizontal Recycler Adapter layout Dimesions
+    <dimen name="productimg_height_width">200dp</dimen>
+    <dimen name="productadapterwidth">250dp</dimen>
+    <dimen name="glowing_text_size">13sp</dimen>
 
 
 </resources>
