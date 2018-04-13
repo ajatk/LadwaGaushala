@@ -41,4 +41,28 @@
     <dimen name="constraint_layout2_height">300dp</dimen>
 
 
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    //HomePage Dimensions
+
+    <dimen name="height_bottom_nav_view_toolbar">60dp</dimen>
+
+
+    //HomeFragment Dimensions
+
+    <dimen name="viewpager_height">170dp</dimen>
+    <dimen name="dots_layout_height">30dp</dimen>
+    <dimen name="services_text_size">15sp</dimen>
+    <dimen name="tumbicon_text_size">12sp</dimen>
+    <dimen name="constraintlyaout_height">200dp</dimen>
+    <dimen name="contrainthalflayout_height">90dp</dimen>
+    <dimen name="naturopathy_layout_height">150dp</dimen>
+    <dimen name="margin_sides_from_parent">15dp</dimen>
+
+
 </resources>

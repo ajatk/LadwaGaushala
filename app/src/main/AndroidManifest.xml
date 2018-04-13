@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".HomePage" />
+        <activity android:name=".HomePageTemp" />
         <activity android:name=".Form"></activity>
     </application>
 

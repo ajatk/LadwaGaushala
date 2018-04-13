@@ -2,13 +2,11 @@ package com.example.ragasoft.ladwagaushala;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.ragasoft.ladwagaushala.utills.MySharedData;
-import com.example.ragasoft.ladwagaushala.utills.SharedPreference;
 
 public class Splash extends AppCompatActivity
 {
@@ -38,7 +36,7 @@ public class Splash extends AppCompatActivity
                             finish();
                         } else /*if(sharedPreference.getValue(context).equals(""))*/ {
                             {
-                                Intent iin = new Intent(Splash.this, HomePage.class);
+                                Intent iin = new Intent(Splash.this, HomePageTemp.class);
                                 startActivity(iin);
                                 finish();
                             }
