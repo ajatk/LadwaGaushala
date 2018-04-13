@@ -1,13 +1,15 @@
 package com.example.ragasoft.ladwagaushala;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,6 +20,7 @@ import com.example.ragasoft.ladwagaushala.model.RegisteredModel;
 import com.example.ragasoft.ladwagaushala.retrofit.ApiClient;
 import com.example.ragasoft.ladwagaushala.retrofit.ApiInterface;
 import com.example.ragasoft.ladwagaushala.utills.MySharedData;
+import com.example.ragasoft.ladwagaushala.utills.SharedPreference;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -134,7 +137,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         MySharedData.setGeneralSaveSession("Email",email_);
                         MySharedData.setGeneralSaveSession("password",password_);
                         Toast.makeText(context, "<<<<<<< email and password>>" +email_ +" " +password_, Toast.LENGTH_SHORT).show();
-                        Intent in = new Intent(LoginActivity.this, HomePageTemp.class);
+                        Intent in = new Intent(LoginActivity.this, HomePage.class);
                         startActivity(in);
 
                        // Toast.makeText(LoginActivity.this, "Status" + response.body().getStatus(), Toast.LENGTH_SHORT).show();
@@ -194,7 +197,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     publicProfile = object.getString("public_profile");
 
 
-                                    Intent intent = new Intent(getApplicationContext(), HomePageTemp.class);
+                                 Intent intent = new Intent(getApplicationContext(), HomePage.class);
                                     startActivity(intent);
                                     finish();
                                 } catch (JSONException e) {
