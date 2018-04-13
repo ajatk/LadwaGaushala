@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.ragasoft.ladwagaushala.utills.MySharedData;
 import com.facebook.login.LoginManager;
 
 public class HomePage extends AppCompatActivity implements View.OnClickListener
 {
     ConstraintLayout layoutList;
-   private ImageView logout_btn;
+   private ImageView logout_btn, profilImg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener
         layoutList.setOnClickListener(this);
         logout_btn = findViewById(R.id.logout_btn);
         logout_btn.setOnClickListener(this);
-
+        profilImg =findViewById(R.id.profile_img);
+       // profilImg.setImageResource(Integer.valueOf(MySharedData.getGeneralSaveSession("profile_pic")));
     }
 
     @Override

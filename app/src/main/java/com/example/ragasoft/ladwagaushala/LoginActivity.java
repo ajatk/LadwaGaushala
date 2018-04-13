@@ -3,6 +3,7 @@ package com.example.ragasoft.ladwagaushala;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,12 +28,14 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
@@ -45,7 +48,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener
 {
     EditText email,password;
-    String email_,password_, publicProfile, email2;
+    String email_,password_, publicProfile, emailfb, sex, profilePic;
     CallbackManager callbackManager;
     LoginButton fbBtn;
     Activity context = this;
@@ -88,13 +91,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.login:
                 addLoginMethod();
+                LoginManager.getInstance().logOut();
+
                  break;
             case R.id.signup_link :
                 Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
                break;
             case R.id.fb_login:
-               fbBtn.performClick();
+                fbBtn.performClick();
+               /*if(id!=null)
+               {
+                   Intent fbIn = new Intent(getApplicationContext(), HomePage.class);
+                   startActivity(fbIn);
+                   finish();
+               } else
+               {
+                   fbBtn.performClick();
+               }*/
               //
                 break;
             case R.id.googlePlus_login:
@@ -162,7 +176,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         List< String > permissionNeeds;
         permissionNeeds = Arrays.asList("user_photos", "email",
                 "user_birthday", "public_profile", "AccessToken");
-        fbBtn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 
             @Override
                 public void onSuccess(LoginResult loginResult) {
@@ -191,20 +205,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     } catch (MalformedURLException e) {
                                         e.printStackTrace();
                                     }
-                                    email2=object.optString("email");
+
                                     name = object.getString("name");
-                                    email_ = object.getString("email");
+                                    emailfb = object.getString("email");
                                     publicProfile = object.getString("public_profile");
+                                    sex = object.getString("gender");
+                                   /*profilePic = object.getString("profile_pic");
+
+                                    Bitmap immage = image;
+                                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                    immage.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                                    byte[] b = baos.toByteArray();
+                                    String imageEncoded = Base64.encodeToString(b, Base64.DEFAULT);
+
+                                    Log.d("Image Log:", imageEncoded);
+                                    return imageEncoded;*/
+
+                                    MySharedData.setGeneralSaveSession("email",emailfb);
+                                    MySharedData.setGeneralSaveSession("name",name);
+                                    MySharedData.setGeneralSaveSession("gender",sex);
+                                    MySharedData.setGeneralSaveSession("profile_pic",profilePic);
+                                    MySharedData.setGeneralSaveSession("public_profile",publicProfile);
 
 
-                                 Intent intent = new Intent(getApplicationContext(), HomePage.class);
-                                    startActivity(intent);
-                                    finish();
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
                             }
                             });
+                Intent fbIn = new Intent(LoginActivity.this, HomePage.class);
+                startActivity(fbIn);
+                finish();
                     Bundle parameters = new Bundle();
                     parameters.putString("fields",
                             "id,name,email,gender, birthday");
