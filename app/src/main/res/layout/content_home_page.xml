@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ragasoft.ladwagaushala.HomePage"
+    tools:showIn="@layout/app_bar_home_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_view"
+            android:background="@color/backgroundappcolor"
+            android:orientation="vertical"></LinearLayout>
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_bottom_nav_view_toolbar"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="false"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/bottom_navigation_bar_item"></android.support.design.widget.BottomNavigationView>
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

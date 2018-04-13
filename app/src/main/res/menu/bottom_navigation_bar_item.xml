@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"
+
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/findus"
+        android:enabled="true"
+        android:icon="@drawable/findus"
+        android:title="Find Us"
+
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/aboutus"
+        android:enabled="true"
+        android:icon="@drawable/aboutus"
+        android:title="About Us"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/donation"
+        android:enabled="true"
+        android:icon="@drawable/donationicons"
+        android:title="Donations"
+
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/callnow"
+        android:enabled="true"
+        android:icon="@drawable/callus"
+        android:title="Call Now"
+
+        app:showAsAction="always|withText" />
+
+</menu>
