@@ -61,8 +61,11 @@
     <dimen name="tumbicon_text_size">12sp</dimen>
     <dimen name="constraintlyaout_height">200dp</dimen>
     <dimen name="contrainthalflayout_height">90dp</dimen>
-    <dimen name="naturopathy_layout_height">150dp</dimen>
+    <dimen name="naturopathy_layout_height">170dp</dimen>
     <dimen name="margin_sides_from_parent">15dp</dimen>
+    <dimen name="heading_text_size">13sp</dimen>
+    <dimen name="seeall_text_size">15sp</dimen>
+    <dimen name="padding_headings">5dp</dimen>
 
 
 </resources>
