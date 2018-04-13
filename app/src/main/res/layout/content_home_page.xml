@@ -19,7 +19,9 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/bottom_view"
             android:background="@color/backgroundappcolor"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+        </LinearLayout>
 
 
         <android.support.design.widget.BottomNavigationView
